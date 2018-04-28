@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:AnemometerConverter-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -314,7 +315,7 @@ Connection ~ 5400 1900
 Wire Wire Line
 	6150 1900 6400 1900
 Wire Wire Line
-	6400 1900 6400 2650
+	6400 1800 6400 2650
 Wire Wire Line
 	6150 2650 7300 2650
 Wire Wire Line
@@ -330,46 +331,6 @@ Wire Wire Line
 	7550 2150 7500 2150
 Wire Wire Line
 	7500 2150 7500 2300
-$Comp
-L LED D3
-U 1 1 5ABEA7B5
-P 6700 2900
-F 0 "D3" H 6700 3000 50  0000 C CNN
-F 1 "PULSE" H 6700 2800 50  0000 C CNN
-F 2 "REInnovationFootprint:TH_LED-5MM_larg_pad" H 6700 2900 50  0001 C CNN
-F 3 "" H 6700 2900 50  0000 C CNN
-	1    6700 2900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R7
-U 1 1 5ABEA82A
-P 6700 3300
-F 0 "R7" V 6780 3300 50  0000 C CNN
-F 1 "1k" V 6700 3300 50  0000 C CNN
-F 2 "REInnovationFootprint:TH_Resistor_1" V 6630 3300 50  0001 C CNN
-F 3 "" H 6700 3300 50  0000 C CNN
-	1    6700 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR07
-U 1 1 5ABEA8AC
-P 6700 3550
-F 0 "#PWR07" H 6700 3300 50  0001 C CNN
-F 1 "GND" H 6700 3400 50  0000 C CNN
-F 2 "" H 6700 3550 50  0000 C CNN
-F 3 "" H 6700 3550 50  0000 C CNN
-	1    6700 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 2750 6700 2650
-Connection ~ 6700 2650
-Wire Wire Line
-	6700 3050 6700 3150
-Wire Wire Line
-	6700 3450 6700 3550
 $Comp
 L CONN_01X01 P3
 U 1 1 5ABEABD2
@@ -428,8 +389,19 @@ Wire Wire Line
 	7200 1950 7550 1950
 Wire Wire Line
 	6900 1950 6650 1950
+$Comp
+L R R7
+U 1 1 5AE4A1C3
+P 6400 1650
+F 0 "R7" V 6480 1650 50  0000 C CNN
+F 1 "10k" V 6400 1650 50  0000 C CNN
+F 2 "REInnovationFootprint:TH_Resistor_1" V 6330 1650 50  0001 C CNN
+F 3 "" H 6400 1650 50  0000 C CNN
+	1    6400 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 6400 1900
 Wire Wire Line
-	5600 2750 5700 2750
-Wire Wire Line
-	5700 2750 5700 2700
+	6400 1500 6400 1400
+Connection ~ 6400 1400
 $EndSCHEMATC
